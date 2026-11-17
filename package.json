@@ -1,0 +1,57 @@
+{
+  "name": "@citewin/aeo-scan",
+  "version": "1.0.0",
+  "description": "Three-hop AEO scanner: checks whether ChatGPT, Claude and Perplexity can crawl, read and cite a domain.",
+  "license": "MIT",
+  "author": "citewin (https://citewin.com)",
+  "homepage": "https://github.com/citewin/awesome-aeo-skills#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/citewin/awesome-aeo-skills.git"
+  },
+  "bugs": "https://github.com/citewin/awesome-aeo-skills/issues",
+  "keywords": [
+    "aeo",
+    "geo",
+    "llms.txt",
+    "gptbot",
+    "claudebot",
+    "perplexitybot",
+    "seo",
+    "mcp",
+    "cli"
+  ],
+  "type": "module",
+  "bin": {
+    "aeo-scan": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "commander": "^15.1.0",
+    "picocolors": "^1.1.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}
